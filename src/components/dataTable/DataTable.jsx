@@ -1,5 +1,5 @@
 import './dataTable.scss'
-import {userColumns, userRows} from './dataTableSource.js'
+import {userColumns, userRows} from '../../dataTableSource.js'
 import { DataGrid } from '@mui/x-data-grid';
 import { dialogClasses } from '@mui/material';
 
