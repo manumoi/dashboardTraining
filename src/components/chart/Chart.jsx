@@ -12,11 +12,11 @@ const data = [
   ];
 
 
-const Chart = () => {
+const Chart = ({aspect, title}) => {
   return (
     <div className="chart">
-        <h1 className="title">Last 6 Months</h1>     
-        <ResponsiveContainer width="100%" aspect={2/1}>
+        <h1 className="title">{title}</h1>     
+        <ResponsiveContainer width="100%" aspect={aspect}>
             <AreaChart width={730} height={250} data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>
                     <linearGradient id="totalColor" x1="0" y1="0" x2="0" y2="1">
