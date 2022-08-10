@@ -11,20 +11,35 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import {Link} from 'react-router-dom'
 
 
 function Sidebar() {
   return (
-    <div className='sidebar'>
-      <div className='top'><span className="logo">IDU ADMIN</span></div>
+    <div className='sidebar'> 
+      <div className='top'>
+        <Link to="/" style={{textDecoration:"none"}}>
+          <span className="logo">IDU ADMIN</span>
+        </Link>
+      </div>
       <hr/>
       <div className='center'>
         <ul>
           <p className="title">MAIN</p>      
           <li><DashboardIcon className='icon'/><span>Dashboard</span></li>
           <p className="title">LISTS</p>
-          <li><GroupIcon className='icon'/><span>Users</span></li>
-          <li><Inventory2OutlinedIcon className='icon'/><span>Products</span></li>
+          <li>
+            <Link to="/users/" style={{textDecoration:"none"}}>
+              <GroupIcon className='icon'/>
+              <span>Users</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/products/" style={{textDecoration:"none"}}>
+              <Inventory2OutlinedIcon className='icon'/>
+              <span>Products</span>
+            </Link>
+          </li>
           <li><StoreRoundedIcon className='icon'/><span>Orders</span></li>
           <li><LocalShippingOutlinedIcon className='icon'/><span>Delivery</span></li>
           <p className="title">USEFUL</p>
